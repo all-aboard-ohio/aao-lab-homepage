@@ -1,4 +1,5 @@
-import { Train, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import aaoLogo from '../assets/AAO_Logo_WhiteAAOLogo.svg';
 
 export default function Footer() {
   return (
@@ -6,14 +7,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 mb-8">
           {/* Brand */}
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-aao-light-blue/20 rounded-lg flex items-center justify-center">
-              <Train size={18} className="text-aao-light-blue" />
-            </div>
-            <div>
-              <div className="font-heading text-white font-bold text-sm">All Aboard Ohio</div>
-              <div className="font-body text-aao-light-blue text-xs">Developer Program</div>
-            </div>
+          <div className="flex items-center">
+            <img src={aaoLogo} alt="All Aboard Ohio logo" className="h-10 w-auto" />
           </div>
 
           {/* Links */}

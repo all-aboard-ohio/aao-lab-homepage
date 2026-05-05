@@ -2,28 +2,26 @@ import { ArrowRight, Train, Code2, Users } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="bg-aao-dark-blue py-20 md:py-28 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-aao-dark-blue py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-            <Train size={14} className="text-aao-light-blue" />
-            <span className="font-body text-aao-light-blue text-xs font-semibold uppercase tracking-widest">
-              All Aboard Ohio Developer Program
-            </span>
-          </div>
+          <p className="inline-flex items-center gap-2 font-body text-aao-light-blue text-xs font-semibold uppercase tracking-widest mb-6">
+            <Train size={14} />
+            All Aboard Ohio Developer Program
+          </p>
 
           {/* Headline */}
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white leading-tight mb-6">
             Develop the Future of<br />
-            <span className="text-aao-light-blue">Ohio Passenger Rail.</span>
+            <span className="text-aao-light-blue">Passenger Rail.</span>
           </h1>
 
           {/* Pitch */}
           <p className="font-body text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
             Policymakers respond to data. The public responds to compelling stories.
             Build the software tools that make the case for passenger rail — and
-            help All Aboard Ohio win.
+            help passenger rail win, in Ohio, and beyond.
           </p>
 
           {/* CTA Buttons */}
@@ -32,14 +30,14 @@ export default function Hero() {
               href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"
             >
               Join the Dev Community
               <ArrowRight size={18} />
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-body font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"
             >
               See the Projects
             </a>

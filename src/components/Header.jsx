@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Menu, X, Train } from 'lucide-react';
+import { Menu, X, GitBranch } from 'lucide-react';
+import aaoLogo from '../assets/AAO_Logo_WhiteAAOLogo.svg';
 
 const navLinks = [
   { label: 'Projects', href: '#projects' },
@@ -16,14 +17,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group" aria-label="All Aboard Ohio Developer Program home">
-            <div className="w-9 h-9 bg-aao-light-blue rounded-lg flex items-center justify-center group-hover:bg-aao-light-red transition-colors duration-200">
-              <Train size={20} className="text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-heading font-bold text-white text-sm leading-tight block">All Aboard Ohio</span>
-              <span className="font-body text-aao-light-blue text-xs leading-tight block">Developer Program</span>
-            </div>
+          <a href="#" className="flex items-center gap-2" aria-label="All Aboard Ohio Developer Program home">
+            <img src={aaoLogo} alt="All Aboard Ohio logo" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -42,10 +37,19 @@ export default function Header() {
           {/* CTA + Mobile Menu Toggle */}
           <div className="flex items-center gap-3">
             <a
+              href="https://github.com/all-aboard-ohio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center justify-center text-gray-300 hover:text-white transition-colors duration-200"
+              aria-label="All Aboard Ohio on GitHub"
+            >
+              <GitBranch size={20} />
+            </a>
+            <a
               href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 rounded-lg transition-colors duration-200 whitespace-nowrap"
+              className="hidden sm:inline-flex items-center gap-1.5 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 whitespace-nowrap"
             >
               Join Slack
             </a>
@@ -76,10 +80,20 @@ export default function Header() {
               </a>
             ))}
             <a
+              href="https://github.com/all-aboard-ohio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-body text-sm text-gray-300 hover:text-white py-1 transition-colors duration-200"
+              onClick={() => setMenuOpen(false)}
+            >
+              <GitBranch size={16} />
+              GitHub Organization
+            </a>
+            <a
               href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 rounded-lg transition-colors duration-200 mt-2"
+              className="inline-flex items-center justify-center bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 mt-2"
               onClick={() => setMenuOpen(false)}
             >
               Join Slack

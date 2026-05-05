@@ -1,4 +1,4 @@
-import { MessageSquare, GraduationCap, BookOpen, ArrowRight } from 'lucide-react';
+import { MessageSquare, GraduationCap, GitBranch, ArrowRight } from 'lucide-react';
 
 export default function Community() {
   return (
@@ -18,7 +18,7 @@ export default function Community() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Slack Card */}
           <div className="bg-aao-dark-blue rounded-2xl p-8 flex flex-col">
             <div className="w-12 h-12 bg-aao-light-blue/20 rounded-xl flex items-center justify-center mb-5">
@@ -27,7 +27,7 @@ export default function Community() {
             <h3 className="font-heading text-white text-2xl font-bold mb-3">
               Join the Dev Slack
             </h3>
-            <p className="font-body text-gray-300 text-sm leading-relaxed mb-6 flex-1">
+            <p className="font-body text-gray-300 text-sm leading-relaxed mb-6">
               Our Slack workspace is where all the action happens — project
               coordination, code reviews, mentorship from experienced engineers,
               and casual conversation about transit advocacy and tech. All skill
@@ -50,76 +50,88 @@ export default function Community() {
               href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-aao-light-blue hover:bg-blue-500 text-white font-body font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+              className="mt-auto inline-flex items-center justify-center gap-2 bg-aao-light-blue hover:bg-blue-500 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"
             >
               Join Slack Workspace
               <ArrowRight size={18} />
             </a>
           </div>
 
-          {/* Academic Card */}
-          <div className="flex flex-col gap-6">
-            {/* Students */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex-1">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-11 h-11 bg-aao-dark-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <GraduationCap size={22} className="text-aao-dark-red" />
-                </div>
-                <div>
-                  <h3 className="font-heading text-aao-dark-blue text-lg font-bold leading-tight">
-                    For Students
-                  </h3>
-                  <p className="font-body text-gray-500 text-xs">Capstone • Internship • Portfolio</p>
-                </div>
-              </div>
-              <p className="font-body text-gray-600 text-sm leading-relaxed mb-4">
-                Use AAO developer challenges as your capstone project, senior design
-                course assignment, or independent study. You'll work on real software
-                with real civic impact — the kind of project that stands out in interviews.
-              </p>
-              <ul className="space-y-2 text-sm font-body text-gray-600">
-                {[
-                  'Real production codebases with meaningful outcomes',
-                  'Mentorship from volunteer professional engineers',
-                  'Letters of recommendation for top contributors',
-                  'Optional demo day presentation to AAO stakeholders',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span className="text-aao-dark-red mt-0.5 flex-shrink-0">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          {/* GitHub Card */}
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col">
+            <div className="w-12 h-12 bg-aao-dark-blue/10 rounded-xl flex items-center justify-center mb-5">
+              <GitBranch size={24} className="text-aao-dark-blue" />
             </div>
+            <h3 className="font-heading text-aao-dark-blue text-2xl font-bold mb-1">
+              GitHub Organization
+            </h3>
+            <p className="font-body text-gray-500 text-xs mb-4">Open Source • Pull Requests • Issues</p>
+            <p className="font-body text-gray-600 text-sm leading-relaxed mb-5">
+              All of our projects are open source. Browse repositories, review open
+              pull requests, pick up a good-first-issue, or follow along as new
+              tools take shape.
+            </p>
+            <ul className="space-y-2 text-sm font-body text-gray-600 mb-6">
+              {[
+                'Browse active projects and open issues',
+                'Submit pull requests and get code reviewed',
+                'Fork templates to start your own build',
+                'Watch repositories to stay up to date',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-aao-dark-blue mt-0.5 flex-shrink-0">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="https://github.com/all-aboard-ohio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto inline-flex items-center gap-2 text-aao-dark-blue hover:text-aao-light-blue font-body font-semibold text-sm py-3 transition-colors duration-200"
+            >
+              View all-aboard-ohio on GitHub
+              <ArrowRight size={14} />
+            </a>
+          </div>
 
-            {/* Professors */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-11 h-11 bg-aao-light-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <BookOpen size={22} className="text-aao-light-blue" />
-                </div>
-                <div>
-                  <h3 className="font-heading text-aao-dark-blue text-lg font-bold leading-tight">
-                    For Professors
-                  </h3>
-                  <p className="font-body text-gray-500 text-xs">Course Curricula • Semester Projects</p>
-                </div>
-              </div>
-              <p className="font-body text-gray-600 text-sm leading-relaxed mb-4">
-                Integrate AAO challenges into your course as a semester-long project
-                or hackathon prompt. We'll co-design a rubric with you, provide
-                mentorship for your students, and showcase standout work.
-              </p>
-              <a
-                href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-aao-light-blue hover:text-aao-dark-blue font-body font-semibold text-sm transition-colors duration-200"
-              >
-                Contact us on Slack (#education)
-                <ArrowRight size={14} />
-              </a>
+          {/* Students Card */}
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col">
+            <div className="w-12 h-12 bg-aao-dark-red/10 rounded-xl flex items-center justify-center mb-5">
+              <GraduationCap size={24} className="text-aao-dark-red" />
             </div>
+            <h3 className="font-heading text-aao-dark-blue text-2xl font-bold mb-1">
+              For Students
+            </h3>
+            <p className="font-body text-gray-500 text-xs mb-4">Capstone • Internship • Portfolio</p>
+            <p className="font-body text-gray-600 text-sm leading-relaxed mb-5">
+              Use AAO developer challenges as your capstone project, senior design
+              course assignment, or independent study. You'll work on real software
+              with real civic impact — the kind of project that stands out in interviews.
+            </p>
+            <ul className="space-y-2 text-sm font-body text-gray-600 mb-6">
+              {[
+                'Real production codebases with meaningful outcomes',
+                'Mentorship from volunteer professional engineers',
+                'Letters of recommendation for top contributors',
+                'Optional demo day presentation to AAO stakeholders',
+                'Professors: contact us on Slack (#education) to co-design a semester rubric for your course',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-aao-dark-red mt-0.5 flex-shrink-0">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto inline-flex items-center gap-2 text-aao-dark-red hover:text-aao-dark-blue font-body font-semibold text-sm py-3 transition-colors duration-200"
+            >
+              Get involved on Slack
+              <ArrowRight size={14} />
+            </a>
           </div>
         </div>
       </div>

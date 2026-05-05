@@ -23,7 +23,7 @@ const pillars = [
     color: 'bg-aao-beige text-aao-dark-blue',
     border: 'border-amber-200',
     description:
-      'Simple, mobile-friendly tools let everyday Ohioans see how rail investment would affect their community — fueling grassroots engagement and political will.',
+      'Simple, mobile-friendly tools let everyday Americans see how rail investment would affect their community — fueling grassroots engagement and political will.',
   },
   {
     icon: FileCode2,
