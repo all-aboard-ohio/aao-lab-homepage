@@ -1,0 +1,11 @@
+{
+  "name": "aao-dev-homepage",
+  "version": "1.0.0",
+  "description": "Public facing site for the All Aboard Ohio Dev Program",
+  "scripts": {
+    "start": "npx --yes serve . --listen 3000",
+    "dev": "npx --yes serve . --listen 3000"
+  },
+  "keywords": ["all-aboard-ohio", "developer", "ohio"],
+  "license": "MIT"
+}
