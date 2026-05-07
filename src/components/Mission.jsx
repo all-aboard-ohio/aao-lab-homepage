@@ -95,7 +95,7 @@ export default function Mission() {
             <ArrowRight size={16} />
           </a>
           <a
-            href="https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/mission-ethos.md"
+            href="https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/mission-ethos.md"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-aao-light-blue hover:text-white text-sm font-semibold transition-colors duration-200"

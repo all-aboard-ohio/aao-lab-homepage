@@ -14,7 +14,7 @@ function App() {
     <div className="min-h-screen flex flex-col font-body">
       <aao-site-header mode="compact" dev-url="https://lab.allaboardohio.org"></aao-site-header>
       <aao-notification
-        config-url="https://raw.githubusercontent.com/all-aboard-ohio/aao-dev-components/main/banner.json"
+        config-url="https://raw.githubusercontent.com/all-aboard-ohio/aao-lab-components/main/banner.json"
       ></aao-notification>
       <Header />
       <main className="flex-1">

@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Search, ChevronDown, ChevronUp, FileText, X, Loader2 } from 'lucide-react';
 
-const DOCS_API = 'https://api.github.com/repos/all-aboard-ohio/aao-dev-docs/contents/';
+const DOCS_API = 'https://api.github.com/repos/all-aboard-ohio/aao-lab-docs/contents/';
 
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -130,12 +130,12 @@ export default function DevDocs() {
             from GitHub templates to architecture patterns.
           </p>
           <a
-            href="https://github.com/all-aboard-ohio/aao-dev-docs"
+            href="https://github.com/all-aboard-ohio/aao-lab-docs"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 font-body text-sm font-semibold text-aao-light-blue hover:text-aao-dark-blue transition-colors duration-200"
           >
-            View the dev-docs repo on GitHub →
+            View the lab-docs repo on GitHub →
           </a>
         </div>
 
@@ -157,15 +157,15 @@ export default function DevDocs() {
               Read the Docs on GitHub
             </h3>
             <p className="font-body text-gray-500 text-sm max-w-sm mx-auto mb-6">
-              Our developer documentation lives in the <strong>aao-dev-docs</strong> repository — browse it directly on GitHub for the full experience.
+              Our developer documentation lives in the <strong>aao-lab-docs</strong> repository — browse it directly on GitHub for the full experience.
             </p>
             <a
-              href="https://github.com/all-aboard-ohio/aao-dev-docs"
+              href="https://github.com/all-aboard-ohio/aao-lab-docs"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-aao-dark-blue hover:bg-aao-light-blue text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full transition-colors duration-200"
             >
-              View aao-dev-docs on GitHub
+              View aao-lab-docs on GitHub
             </a>
           </div>
         )}
@@ -220,12 +220,12 @@ export default function DevDocs() {
                 <p className="font-body text-sm mt-1">
                   Add <code>.md</code> files to the{' '}
                   <a
-                    href="https://github.com/all-aboard-ohio/aao-dev-docs"
+                    href="https://github.com/all-aboard-ohio/aao-lab-docs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-aao-light-blue underline hover:text-aao-dark-blue"
                   >
-                    aao-dev-docs repository
+                    aao-lab-docs repository
                   </a>{' '}
                   to populate this section.
                 </p>

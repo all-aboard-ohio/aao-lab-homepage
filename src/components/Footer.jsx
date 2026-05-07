@@ -33,22 +33,22 @@ const navGroups = [
     links: [
       {
         text: 'Mission & Ethos',
-        href: 'https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/mission-ethos.md',
+        href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/mission-ethos.md',
         external: true,
       },
       {
         text: 'Contributing Guide',
-        href: 'https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/contributing.md',
+        href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/contributing.md',
         external: true,
       },
       {
         text: 'Style Guide',
-        href: 'https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/style-guide.md',
+        href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/style-guide.md',
         external: true,
       },
       {
         text: 'Project Requirements',
-        href: 'https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/requirements.md',
+        href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/requirements.md',
         external: true,
       },
     ],
