@@ -1,54 +1,118 @@
 import { ExternalLink } from 'lucide-react';
 import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
+const navGroups = [
+  {
+    label: 'Platform',
+    links: [
+      { text: 'Tools & Projects', href: '#projects' },
+      { text: 'Why It Matters', href: '#why-matters' },
+      { text: 'Our Vision', href: '#mission' },
+      { text: 'Partners', href: '#partners' },
+    ],
+  },
+  {
+    label: 'Community',
+    links: [
+      { text: 'Get Involved', href: '#community' },
+      { text: 'Developer Docs', href: '#dev-docs' },
+      {
+        text: 'Join Slack',
+        href: 'https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA',
+        external: true,
+      },
+      {
+        text: 'GitHub',
+        href: 'https://github.com/all-aboard-ohio',
+        external: true,
+      },
+    ],
+  },
+  {
+    label: 'Documentation',
+    links: [
+      {
+        text: 'Mission & Ethos',
+        href: 'https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/mission-ethos.md',
+        external: true,
+      },
+      {
+        text: 'Contributing Guide',
+        href: 'https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/contributing.md',
+        external: true,
+      },
+      {
+        text: 'Style Guide',
+        href: 'https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/style-guide.md',
+        external: true,
+      },
+      {
+        text: 'Project Requirements',
+        href: 'https://github.com/all-aboard-ohio/aao-dev-docs/blob/main/requirements.md',
+        external: true,
+      },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-aao-dark-blue text-gray-300 py-10 px-4">
+    <footer className="bg-aao-dark-blue text-gray-300 py-14 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 mb-8">
+        {/* Top: brand + nav */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
-          <div className="flex items-center">
-            <img src={aaoLogo} alt="AAO Data Lab logo" className="h-10 w-auto" />
-          </div>
-
-          {/* Links */}
-          <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-body">
+          <div className="md:col-span-1">
+            <img src={aaoLogo} alt="AAO Data Lab logo" className="h-9 w-auto mb-4" />
+            <p className="font-body text-gray-400 text-sm leading-relaxed max-w-xs">
+              Open-source data tools for passenger rail and connected mobility advocacy.
+            </p>
             <a
               href="https://allaboardohio.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors duration-200"
+              className="inline-flex items-center gap-1.5 text-aao-light-blue hover:text-white text-xs font-body mt-3 transition-colors duration-200"
             >
               allaboardohio.org
-              <ExternalLink size={12} />
-            </a>
-            <a
-              href="https://github.com/all-aboard-ohio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              GitHub
-              <ExternalLink size={12} />
-            </a>
-            <a
-              href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              Slack
-              <ExternalLink size={12} />
+              <ExternalLink size={11} />
             </a>
           </div>
+
+          {/* Nav groups */}
+          {navGroups.map((group) => (
+            <div key={group.label}>
+              <h4 className="font-heading text-white text-xs font-bold uppercase tracking-widest mb-4">
+                {group.label}
+              </h4>
+              <ul className="space-y-2.5">
+                {group.links.map((link) => (
+                  <li key={link.text}>
+                    <a
+                      href={link.href}
+                      {...(link.external
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                      className="font-body text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1.5"
+                    >
+                      {link.text}
+                      {link.external && <ExternalLink size={10} className="opacity-50" />}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/10 pt-6">
-          <p className="font-body text-xs text-gray-500 text-center leading-relaxed max-w-2xl mx-auto">
-            Part of the All Aboard Ohio Data Lab. Projects are
-            volunteer-contributed and do not necessarily represent the official
-            viewpoints or policy positions of All Aboard Ohio.
+        {/* Divider + legal */}
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="font-body text-xs text-gray-500 leading-relaxed">
+            &copy; {new Date().getFullYear()} All Aboard Ohio Data Lab. Volunteer-contributed,
+            open source.
+          </p>
+          <p className="font-body text-xs text-gray-600 leading-relaxed text-center md:text-right max-w-md">
+            Projects do not necessarily represent the official viewpoints or policy positions of
+            All Aboard Ohio.
           </p>
         </div>
       </div>
