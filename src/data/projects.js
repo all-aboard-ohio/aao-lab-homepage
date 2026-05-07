@@ -1,13 +1,13 @@
 export const projects = [
   {
     id: 1,
-    title: "Member Resource Dashboard",
+    title: "All Aboard Ohio Website",
     description:
-      "A centralized portal for All Aboard Ohio members — access campaign materials, talking points, legislative contact info, and event calendars in one place.",
+      "The official All Aboard Ohio website — featuring a news page with stories, insights, and perspectives on passenger rail, transit policy, and mobility advocacy in Ohio.",
     status: "Live",
     url: "https://allaboardohio.org",
     icon: "LayoutDashboard",
-    tags: ["Advocates", "Campaign Resources", "Events"],
+    tags: ["News", "Rail Advocacy", "Policy"],
   },
 ];
 
