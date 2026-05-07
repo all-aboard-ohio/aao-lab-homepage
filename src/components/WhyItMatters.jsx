@@ -86,7 +86,7 @@ export default function WhyItMatters() {
               a door that lets advocates into rooms they couldn't otherwise enter."
             </p>
             <cite className="font-body text-aao-light-blue text-sm not-italic">
-              — All Aboard Ohio Developer Program
+              — AAO Data Lab
             </cite>
           </blockquote>
         </div>

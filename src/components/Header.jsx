@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, GitBranch } from 'lucide-react';
-import aaoLogo from '../assets/AAO_Logo_WhiteAAOLogo.svg';
+import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
 const navLinks = [
   { label: 'Projects', href: '#projects' },
@@ -17,8 +17,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2" aria-label="All Aboard Ohio Developer Program home">
-            <img src={aaoLogo} alt="All Aboard Ohio logo" className="h-10 w-auto" />
+          <a href="#" className="flex items-center gap-2" aria-label="AAO Data Lab home">
+            <img src={aaoLogo} alt="AAO Data Lab logo" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center justify-center text-gray-300 hover:text-white transition-colors duration-200"
-              aria-label="All Aboard Ohio on GitHub"
+              aria-label="AAO Data Lab on GitHub"
             >
               <GitBranch size={20} />
             </a>
