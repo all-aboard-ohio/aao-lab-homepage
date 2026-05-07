@@ -77,9 +77,22 @@ export default function DevDocs() {
         return r.json();
       })
       .then((files) => {
-        const mdFiles = files.filter(
-          (f) => f.type === 'file' && f.name.endsWith('.md') && f.name.toLowerCase() !== 'readme.md'
-        );
+        const PRIORITY = [
+          'getting-started.md',
+          'code-of-conduct.md',
+          'roles.md',
+          'contributing.md',
+        ];
+        const mdFiles = files
+          .filter((f) => f.type === 'file' && f.name.endsWith('.md') && f.name.toLowerCase() !== 'readme.md')
+          .sort((a, b) => {
+            const ai = PRIORITY.indexOf(a.name.toLowerCase());
+            const bi = PRIORITY.indexOf(b.name.toLowerCase());
+            if (ai !== -1 && bi !== -1) return ai - bi;
+            if (ai !== -1) return -1;
+            if (bi !== -1) return 1;
+            return a.name.localeCompare(b.name);
+          });
         return Promise.all(
           mdFiles.map((f) =>
             fetch(f.download_url)

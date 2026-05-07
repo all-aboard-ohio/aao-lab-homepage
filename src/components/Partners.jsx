@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink } from 'lucide-react';
+﻿import { ArrowRight, ExternalLink } from 'lucide-react';
 
 const academicPartners = [
   { name: 'The Ohio State University', dept: 'City & Regional Planning' },
@@ -133,7 +133,7 @@ export default function Partners() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
             <a
-              href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
+              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-aao-dark-blue hover:bg-aao-light-blue text-white font-body font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 text-sm"

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Menu, X, GitBranch } from 'lucide-react';
 import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
@@ -46,7 +46,7 @@ export default function Header() {
               <GitBranch size={20} />
             </a>
             <a
-              href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
+              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-1.5 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 whitespace-nowrap"
@@ -90,7 +90,7 @@ export default function Header() {
               GitHub Organization
             </a>
             <a
-              href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
+              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 mt-2"

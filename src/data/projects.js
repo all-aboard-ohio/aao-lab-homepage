@@ -28,9 +28,9 @@ export const comingSoon = [
   },
   {
     id: 4,
-    title: "Rail News Digest",
+    title: "Station Data Collection",
     description:
-      "A daily digest of Ohio rail news, legislative updates, and public commentary — curated for advocates and policymakers.",
+      "A mobile-first, crowd-sourced platform for collecting real-time station information and updates — contributed directly by riders in the field.",
     icon: "Newspaper",
   },
 ];

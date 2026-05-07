@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+﻿import { ExternalLink } from 'lucide-react';
 import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
 const navGroups = [
@@ -18,7 +18,7 @@ const navGroups = [
       { text: 'Developer Docs', href: '#dev-docs' },
       {
         text: 'Join Slack',
-        href: 'https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA',
+        href: 'https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w',
         external: true,
       },
       {

@@ -1,4 +1,4 @@
-# All Aboard Ohio Developer Program — Landing Page
+﻿# All Aboard Ohio Developer Program — Landing Page
 
 Public-facing landing page for [dev.allaboardohio.org](https://dev.allaboardohio.org), built with **React + Vite + Tailwind CSS**.
 
@@ -56,7 +56,7 @@ src/
 
 ## Contributing
 
-Open an issue or pull request. Join the [AAO Slack](https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA) (#dev-resources) for coordination.
+Open an issue or pull request. Join the [AAO Slack](https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w) (#dev-resources) for coordination.
 
 ---
 

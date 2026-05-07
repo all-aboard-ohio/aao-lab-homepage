@@ -4,7 +4,6 @@ import ProjectGallery from './components/ProjectGallery';
 import WhyItMatters from './components/WhyItMatters';
 import Mission from './components/Mission';
 import Community from './components/Community';
-import Partners from './components/Partners';
 import DevDocs from './components/DevDocs';
 import Footer from './components/Footer';
 import './index.css';
@@ -23,7 +22,6 @@ function App() {
         <WhyItMatters />
         <Mission />
         <Community />
-        <Partners />
         <DevDocs />
       </main>
       <Footer />

@@ -1,4 +1,4 @@
-import { MessageSquare, GraduationCap, GitBranch, ArrowRight } from 'lucide-react';
+﻿import { MessageSquare, GraduationCap, GitBranch, ArrowRight } from 'lucide-react';
 
 export default function Community() {
   return (
@@ -47,7 +47,7 @@ export default function Community() {
               ))}
             </div>
             <a
-              href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
+              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-auto inline-flex items-center justify-center gap-2 bg-aao-light-blue hover:bg-blue-500 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"
@@ -124,7 +124,7 @@ export default function Community() {
               ))}
             </ul>
             <a
-              href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
+              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-auto inline-flex items-center gap-2 text-aao-dark-red hover:text-aao-dark-blue font-body font-semibold text-sm py-3 transition-colors duration-200"

@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+﻿import { ArrowRight } from 'lucide-react';
 
 const pillars = [
   {
@@ -86,7 +86,7 @@ export default function Mission() {
         {/* CTA */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
-            href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
+            href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"
