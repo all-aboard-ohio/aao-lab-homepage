@@ -10,7 +10,7 @@ import './index.css';
 function App() {
   return (
     <div className="min-h-screen flex flex-col font-body">
-      <aao-site-header mode="compact"></aao-site-header>
+      <aao-site-header mode="compact" dev-url="https://lab.allaboardohio.org"></aao-site-header>
       <aao-notification
         config-url="https://raw.githubusercontent.com/all-aboard-ohio/aao-dev-components/main/banner.json"
       ></aao-notification>

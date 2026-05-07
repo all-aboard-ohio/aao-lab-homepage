@@ -8,7 +8,7 @@ export default function Hero() {
           {/* Eyebrow */}
           <p className="inline-flex items-center gap-2 font-body text-aao-light-blue text-xs font-semibold uppercase tracking-widest mb-6">
             <Train size={14} />
-            All Aboard Ohio Developer Program
+            AAO Data Lab
           </p>
 
           {/* Headline */}

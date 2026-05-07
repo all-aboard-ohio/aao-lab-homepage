@@ -1,5 +1,5 @@
 import { ExternalLink } from 'lucide-react';
-import aaoLogo from '../assets/AAO_Logo_WhiteAAOLogo.svg';
+import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 mb-8">
           {/* Brand */}
           <div className="flex items-center">
-            <img src={aaoLogo} alt="All Aboard Ohio logo" className="h-10 w-auto" />
+            <img src={aaoLogo} alt="AAO Data Lab logo" className="h-10 w-auto" />
           </div>
 
           {/* Links */}
@@ -46,7 +46,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 pt-6">
           <p className="font-body text-xs text-gray-500 text-center leading-relaxed max-w-2xl mx-auto">
-            Part of the All Aboard Ohio Developer Program. Developer projects are
+            Part of the All Aboard Ohio Data Lab. Projects are
             volunteer-contributed and do not necessarily represent the official
             viewpoints or policy positions of All Aboard Ohio.
           </p>
