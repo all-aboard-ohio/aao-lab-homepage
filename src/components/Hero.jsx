@@ -1,4 +1,4 @@
-import { ArrowRight, Train, Code2, Users } from 'lucide-react';
+﻿import { ArrowRight, Train, Code2, Users } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -8,7 +8,7 @@ export default function Hero() {
           {/* Eyebrow */}
           <p className="inline-flex items-center gap-2 font-body text-aao-light-blue text-xs font-semibold uppercase tracking-widest mb-6">
             <Train size={14} />
-            AAO Data Lab
+            All Aboard Ohio Data Lab
           </p>
 
           {/* Headline */}
@@ -27,7 +27,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <a
-              href="https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA"
+              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"

@@ -1,4 +1,4 @@
-export const docs = [
+﻿export const docs = [
   {
     id: 1,
     title: "Getting Started with GitHub Templates",
@@ -74,7 +74,7 @@ VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 \`\`\`
 
-Request API keys from the #dev-resources channel in the [AAO Slack](https://join.slack.com/t/all-aboard-ohio/shared_invite/zt-3wgj180pu-eWAJoGn4_6~y9YHR9Lq3qA).
+Request API keys from the #dev-resources channel in the [AAO Slack](https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w).
 `,
   },
   {
