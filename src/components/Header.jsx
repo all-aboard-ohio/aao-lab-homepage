@@ -1,36 +1,42 @@
 ﻿import { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, GitBranch } from 'lucide-react';
 import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
 const navLinks = [
-  { label: 'Projects', href: '#projects' },
-  { label: 'Why It Matters', href: '#why-matters' },
-  { label: 'Community', href: '#community' },
-  { label: 'Dev Docs', href: '#dev-docs' },
+  { label: 'Projects', to: '/#projects' },
+  { label: 'Commission', to: '/commission' },
+  { label: 'Contribute', to: '/contribute' },
+  { label: 'About', to: '/about' },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const linkClass = ({ isActive }) =>
+    `font-body text-sm transition-colors duration-200 relative after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:bg-aao-light-blue after:transition-all hover:after:w-full ${
+      isActive ? 'text-white after:w-full' : 'text-gray-300 hover:text-white after:w-0'
+    }`;
 
   return (
     <header className="sticky top-0 z-50 bg-aao-dark-blue shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2" aria-label="AAO Data Lab home">
+          <Link to="/" className="flex items-center gap-2" aria-label="AAO Data Lab home">
             <img src={aaoLogo} alt="AAO Data Lab logo" className="h-10 w-auto" />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="font-body text-sm text-gray-300 hover:text-white transition-colors duration-200 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-aao-light-blue after:transition-all hover:after:w-full"
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={link.to.includes('#') ? 'font-body text-sm text-gray-300 hover:text-white transition-colors duration-200' : linkClass}
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
           </nav>
 
@@ -70,14 +76,14 @@ export default function Header() {
         <div className="md:hidden bg-aao-dark-blue border-t border-blue-900 px-4 pb-4 pt-2">
           <nav className="flex flex-col gap-3" aria-label="Mobile navigation">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <NavLink
+                key={link.to}
+                to={link.to}
                 className="font-body text-sm text-gray-300 hover:text-white py-1 transition-colors duration-200"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
             <a
               href="https://github.com/all-aboard-ohio"
