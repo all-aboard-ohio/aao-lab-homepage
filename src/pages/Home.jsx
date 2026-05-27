@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, GraduationCap, BookOpen, Bell, MessageSquare, GitBranch } from 'lucide-react';
 import { SLACK_INVITE_URL, GITHUB_ORG_URL } from '../config';
 import ProjectGallery from '../components/ProjectGallery';
+import Problem from '../components/Problem';
 import WhyItMatters from '../components/WhyItMatters';
 import Seo from '../components/Seo';
 
@@ -230,6 +231,7 @@ export default function Home() {
         }}
       />
       <HomeHero />
+      <Problem />
       <WhyItMatters />
       <ProjectGallery />
       <GetInvolvedCTAs />
