@@ -1,56 +1,34 @@
-﻿import { ExternalLink } from 'lucide-react';
+﻿import { SLACK_INVITE_URL } from '../config';
+import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
 const navGroups = [
   {
     label: 'Platform',
     links: [
-      { text: 'Tools & Projects', href: '#projects' },
-      { text: 'Why It Matters', href: '#why-matters' },
-      { text: 'Our Vision', href: '#mission' },
-      { text: 'Partners', href: '#partners' },
+      { text: 'Projects', to: '/' },
+      { text: 'Commission a Project', to: '/commission' },
+      { text: 'Contribute Your Skills', to: '/contribute' },
+      { text: 'About AAO', to: '/about' },
     ],
   },
   {
     label: 'Community',
     links: [
-      { text: 'Get Involved', href: '#community' },
-      { text: 'Developer Docs', href: '#dev-docs' },
-      {
-        text: 'Join Slack',
-        href: 'https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w',
-        external: true,
-      },
-      {
-        text: 'GitHub',
-        href: 'https://github.com/all-aboard-ohio',
-        external: true,
-      },
+      { text: 'Join Slack', href: SLACK_INVITE_URL, external: true },
+      { text: 'GitHub', href: 'https://github.com/all-aboard-ohio', external: true },
+      { text: 'Project Board', href: 'https://github.com/orgs/all-aboard-ohio/projects', external: true },
+      { text: 'Propose a Project', href: 'https://github.com/all-aboard-ohio/aao-lab-planning/issues/new/choose', external: true },
     ],
   },
   {
     label: 'Documentation',
     links: [
-      {
-        text: 'Mission & Ethos',
-        href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/mission-ethos.md',
-        external: true,
-      },
-      {
-        text: 'Contributing Guide',
-        href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/contributing.md',
-        external: true,
-      },
-      {
-        text: 'Style Guide',
-        href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/style-guide.md',
-        external: true,
-      },
-      {
-        text: 'Project Requirements',
-        href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/requirements.md',
-        external: true,
-      },
+      { text: 'Mission & Ethos', href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/mission-ethos.md', external: true },
+      { text: 'Contributing Guide', href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/contributing.md', external: true },
+      { text: 'Style Guide', href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/style-guide.md', external: true },
+      { text: 'Onboarding', href: 'https://github.com/all-aboard-ohio/aao-lab-docs/blob/main/onboarding.md', external: true },
     ],
   },
 ];
@@ -87,16 +65,24 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {group.links.map((link) => (
                   <li key={link.text}>
-                    <a
-                      href={link.href}
-                      {...(link.external
-                        ? { target: '_blank', rel: 'noopener noreferrer' }
-                        : {})}
-                      className="font-body text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1.5"
-                    >
-                      {link.text}
-                      {link.external && <ExternalLink size={10} className="opacity-50" />}
-                    </a>
+                    {link.to ? (
+                      <Link
+                        to={link.to}
+                        className="font-body text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                      >
+                        {link.text}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-body text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1.5"
+                      >
+                        {link.text}
+                        <ExternalLink size={10} className="opacity-50" />
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

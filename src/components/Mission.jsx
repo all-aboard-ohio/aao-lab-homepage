@@ -1,4 +1,5 @@
-﻿import { ArrowRight } from 'lucide-react';
+﻿import { SLACK_INVITE_URL } from '../config';
+import { ArrowRight } from 'lucide-react';
 
 const pillars = [
   {
@@ -83,10 +84,25 @@ export default function Mission() {
           ))}
         </div>
 
+        {/* Non-partisan callout */}
+        <div className="rounded-2xl border border-aao-light-blue/20 bg-white/5 px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
+          <div className="w-9 h-9 rounded-lg bg-aao-light-blue/20 flex items-center justify-center flex-shrink-0">
+            <span className="text-aao-light-blue text-base font-heading font-extrabold">§</span>
+          </div>
+          <div>
+            <p className="font-heading text-white text-sm font-bold mb-0.5">Non-partisan by design</p>
+            <p className="font-body text-gray-400 text-sm leading-relaxed">
+              AAO Data Lab is a 501(c)(3) nonprofit. Our tools present data and evidence — we don't
+              campaign for parties, candidates, or ideological positions. We believe better information
+              leads to better decisions, whoever is making them.
+            </p>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
-            href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+            href={SLACK_INVITE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"

@@ -1,4 +1,4 @@
-import { ExternalLink, TrendingUp, Map, Newspaper, LayoutDashboard, ArrowRight } from 'lucide-react';
+import { ExternalLink, TrendingUp, Map, Newspaper, LayoutDashboard, ArrowRight, FileText } from 'lucide-react';
 import { projects, comingSoon } from '../data/projects';
 
 const iconMap = {
@@ -6,6 +6,18 @@ const iconMap = {
   Map,
   Newspaper,
   LayoutDashboard,
+  FileText,
+};
+
+const SCIOTO_STUDY = {
+  id: 'scioto-study',
+  icon: 'FileText',
+  title: 'Economic Impact & Fiscal Analysis',
+  description:
+    'Independent study by Scioto Analysis covering jobs, GDP, tax revenue, and long-term fiscal outcomes that inform AAO Data Lab tools.',
+  tags: ['Research', 'Economic Analysis', 'PDF'],
+  url: 'https://www.allaboardohio.org/_files/ugd/903aba_baf6e83ae6cf40cface66843e66c5616.pdf',
+  ctaLabel: 'Read study',
 };
 
 function ToolCard({ project }) {
@@ -47,7 +59,7 @@ function ToolCard({ project }) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-aao-dark-blue hover:bg-aao-light-blue text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 w-fit"
         >
-          Open tool
+          {project.ctaLabel || 'Open tool'}
           <ExternalLink size={14} />
         </a>
       </div>
@@ -57,8 +69,8 @@ function ToolCard({ project }) {
 
 export default function ProjectGallery() {
   return (
-    <section id="projects" className="py-16 md:py-24 px-4 bg-aao-beige">
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="py-16 md:py-24 bg-aao-beige">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12">
           <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
@@ -67,14 +79,17 @@ export default function ProjectGallery() {
           <h2 className="font-heading text-aao-dark-blue text-3xl md:text-4xl font-extrabold mb-4">
             Built for Advocates
           </h2>
+          <div className="rounded-xl bg-white/60 border border-aao-light-blue/20 px-5 py-3 mb-4">
+            <span className="font-heading text-aao-dark-blue font-bold">AAO Data Lab</span> is a project of <a href="https://allaboardohio.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-aao-dark-red">All Aboard Ohio</a>, a nonprofit working to advance passenger rail and connected transit for all communities.
+          </div>
           <p className="font-body text-gray-600 text-lg max-w-2xl leading-relaxed">
-            Free tools to help you make the case for passenger rail in North America — no technical background required.
+            Free, open-source tools to help you make the case for passenger rail — no technical background required. Anyone can contribute.
           </p>
         </div>
 
         {/* Live Tools */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
-          {projects.map((project) => (
+          {[SCIOTO_STUDY, ...projects].map((project) => (
             <ToolCard key={project.id} project={project} />
           ))}
         </div>

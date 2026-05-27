@@ -7,7 +7,7 @@ const pillars = [
     color: 'bg-aao-light-blue/10 text-aao-light-blue',
     border: 'border-aao-light-blue/20',
     description:
-      'Real-time dashboards and automated reporting tools cut hours of manual work, freeing advocates to focus on relationship-building and coalition strategy.',
+      'Dashboards and automated reporting tools cut hours of manual work, freeing advocates to focus on relationship-building and coalition strategy.',
   },
   {
     icon: Globe,
@@ -15,7 +15,7 @@ const pillars = [
     color: 'bg-aao-dark-red/10 text-aao-dark-red',
     border: 'border-aao-dark-red/20',
     description:
-      'Economic models and interactive maps translate complex ridership and fiscal data into digestible, share-ready briefs for legislative hearings and agency reviews.',
+      'Economic models and interactive maps translate complex ridership and fiscal data into digestible, share-ready briefs for decision makers and agencies.',
   },
   {
     icon: Users2,
@@ -23,7 +23,7 @@ const pillars = [
     color: 'bg-aao-beige text-aao-dark-blue',
     border: 'border-amber-200',
     description:
-      'Simple, mobile-friendly tools let everyday Americans see how rail investment would affect their community — fueling grassroots engagement and political will.',
+      'Simple, mobile-friendly tools let anyone see how rail investment could affect their community — fueling grassroots engagement and public conversation.',
   },
   {
     icon: FileCode2,
@@ -37,8 +37,8 @@ const pillars = [
 
 export default function WhyItMatters() {
   return (
-    <section id="why-matters" className="py-16 md:py-24 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="why-matters" className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-14">
           <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
@@ -48,9 +48,7 @@ export default function WhyItMatters() {
             Why This Matters
           </h2>
           <p className="font-body text-gray-600 text-lg leading-relaxed">
-            The gap between great policy ideas and actual implementation is often a
-            data gap. Well-designed software closes that gap — turning complex research
-            into persuasive, accessible tools that move people and decisions.
+            The gap between great policy ideas and actual implementation is often a data gap. Well-designed software closes that gap — turning complex research into persuasive, accessible tools that move people and decisions.
           </p>
         </div>
 
