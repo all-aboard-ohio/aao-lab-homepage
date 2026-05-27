@@ -9,14 +9,6 @@ const transitImpacts = [
     title: 'Regional Competitiveness',
     body: 'Regions with intercity rail attract investment, talent, and business relocations. A connected Ohio competes with connected states — for employers, for residents, and for federal infrastructure dollars.',
   },
-  {
-    title: 'Climate &amp; Land Use',
-    body: 'Rail and transit carry people with a fraction of the emissions of car travel. They concentrate development around stations rather than sprawling it across farmland and greenways.',
-  },
-  {
-    title: 'Equity',
-    body: "Car dependency is a poverty trap. Transit gives people who can't afford or drive a car access to the same opportunities as everyone else. That's not a nice-to-have — it's a justice issue.",
-  },
 ];
 
 const timeline = [
