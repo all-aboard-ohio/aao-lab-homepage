@@ -8,6 +8,10 @@ on:
     - cron: '0 2 * * *'
   workflow_dispatch:
 
+# Opt into Node.js 24 now ahead of the June 2 forced migration
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: read
   pages: write
