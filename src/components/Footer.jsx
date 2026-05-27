@@ -1,4 +1,5 @@
-﻿import { ExternalLink } from 'lucide-react';
+﻿import { SLACK_INVITE_URL } from '../config';
+import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
@@ -15,7 +16,7 @@ const navGroups = [
   {
     label: 'Community',
     links: [
-      { text: 'Join Slack', href: 'https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w', external: true },
+      { text: 'Join Slack', href: SLACK_INVITE_URL, external: true },
       { text: 'GitHub', href: 'https://github.com/all-aboard-ohio', external: true },
       { text: 'Project Board', href: 'https://github.com/orgs/all-aboard-ohio/projects', external: true },
       { text: 'Propose a Project', href: 'https://github.com/all-aboard-ohio/aao-lab-planning/issues/new/choose', external: true },

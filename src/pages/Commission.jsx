@@ -1,4 +1,6 @@
+import { SLACK_INVITE_URL } from '../config';
 import { ArrowRight, ExternalLink, Building2, Landmark, Megaphone, FlaskConical, CheckCircle2 } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const audiences = [
   {
@@ -61,9 +63,22 @@ const deliverables = [
 export default function Commission() {
   return (
     <>
+      <Seo
+        title="Commission a Project | AAO Data Lab"
+        description="Partner with AAO Data Lab to commission open-source transit research tools, dashboards, analyses, and data pipelines for advocacy and planning."
+        path="/commission"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Commission a Project',
+          url: 'https://lab.allaboardohio.org/commission',
+          description:
+            'Commission open-source civic tech tools and analyses from the AAO Data Lab.',
+        }}
+      />
       {/* Hero */}
-      <section className="bg-aao-dark-blue py-20 md:py-28 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-aao-dark-blue py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 font-body text-aao-light-blue text-xs font-semibold uppercase tracking-widest mb-6">
               For Partners &amp; Organizations
@@ -79,7 +94,7 @@ export default function Commission() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+                href={SLACK_INVITE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"
@@ -102,8 +117,8 @@ export default function Commission() {
       </section>
 
       {/* Who It's For */}
-      <section className="py-16 md:py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
               Who It's For
@@ -140,8 +155,8 @@ export default function Commission() {
       </section>
 
       {/* What You Can Commission */}
-      <section className="py-16 md:py-20 px-4 bg-aao-beige">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 md:py-20 bg-aao-beige">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:flex gap-12 items-start">
             <div className="flex-1 mb-10 md:mb-0">
               <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
@@ -194,8 +209,8 @@ export default function Commission() {
       </section>
 
       {/* Process */}
-      <section className="py-16 md:py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
               How It Works
@@ -219,8 +234,8 @@ export default function Commission() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 px-4 bg-aao-dark-blue">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-16 md:py-20 bg-aao-dark-blue">
+        <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-white text-3xl md:text-4xl font-extrabold mb-4">
             Ready to get started?
           </h2>
@@ -231,7 +246,7 @@ export default function Commission() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+              href={SLACK_INVITE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"

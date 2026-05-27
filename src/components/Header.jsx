@@ -1,10 +1,11 @@
-﻿import { useState } from 'react';
+﻿import { SLACK_INVITE_URL } from '../config';
+import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, GitBranch } from 'lucide-react';
 import aaoLogo from '../assets/AAOLAB_White_Logo.svg';
 
 const navLinks = [
-  { label: 'Projects', to: '/#projects' },
+  { label: 'Home', to: '/' },
   { label: 'Commission', to: '/commission' },
   { label: 'Contribute', to: '/contribute' },
   { label: 'About', to: '/about' },
@@ -33,7 +34,7 @@ export default function Header() {
               <NavLink
                 key={link.to}
                 to={link.to}
-                className={link.to.includes('#') ? 'font-body text-sm text-gray-300 hover:text-white transition-colors duration-200' : linkClass}
+                className={linkClass}
               >
                 {link.label}
               </NavLink>
@@ -52,7 +53,7 @@ export default function Header() {
               <GitBranch size={20} />
             </a>
             <a
-              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+              href={SLACK_INVITE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-1.5 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 whitespace-nowrap"
@@ -96,7 +97,7 @@ export default function Header() {
               GitHub Organization
             </a>
             <a
-              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+              href={SLACK_INVITE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 mt-2"

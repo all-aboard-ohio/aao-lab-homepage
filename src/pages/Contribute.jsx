@@ -1,5 +1,8 @@
+import { SLACK_INVITE_URL } from '../config';
 import { ArrowRight, ExternalLink, Code2, BarChart3, Palette, FileSearch, GitBranch, PenLine, Users2, GraduationCap, BookOpen } from 'lucide-react';
 import DevDocs from '../components/DevDocs';
+import GoodFirstIssues from '../components/GoodFirstIssues';
+import Seo from '../components/Seo';
 
 const disciplines = [
   {
@@ -57,7 +60,7 @@ const gettingStartedSteps = [
     step: '01',
     title: 'Join the Slack workspace',
     body: 'Introduce yourself in #welcome — say who you are, where you\'re from, and what you do or want to learn.',
-    cta: { text: 'Join Slack', href: 'https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w', external: true },
+    cta: { text: 'Join Slack', href: SLACK_INVITE_URL, external: true },
   },
   {
     step: '02',
@@ -82,9 +85,22 @@ const gettingStartedSteps = [
 export default function Contribute() {
   return (
     <>
+      <Seo
+        title="Contribute | AAO Data Lab"
+        description="Contribute to AAO Data Lab projects in software, data, design, policy, and documentation. Browse onboarding steps and open issues to get started."
+        path="/contribute"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Contribute to AAO Data Lab',
+          url: 'https://lab.allaboardohio.org/contribute',
+          description:
+            'Join AAO Data Lab contributors and work on open-source rail advocacy tools.',
+        }}
+      />
       {/* Hero */}
-      <section className="bg-aao-dark-blue py-20 md:py-28 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-aao-dark-blue py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 font-body text-aao-light-blue text-xs font-semibold uppercase tracking-widest mb-6">
               For Individuals &amp; Teams
@@ -100,7 +116,7 @@ export default function Contribute() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+                href={SLACK_INVITE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"
@@ -122,9 +138,49 @@ export default function Contribute() {
         </div>
       </section>
 
+      {/* Good First Issues — live GitHub feed */}
+      <GoodFirstIssues />
+
+      {/* Getting Started Steps */}
+      <section className="py-16 md:py-24 bg-aao-beige">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 max-w-2xl">
+            <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
+              Getting Started
+            </p>
+            <h2 className="font-heading text-aao-dark-blue text-3xl md:text-4xl font-extrabold mb-4">
+              Your First Week
+            </h2>
+            <p className="font-body text-gray-600 text-lg leading-relaxed">
+              Here's exactly what to do to go from interested to contributing.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {gettingStartedSteps.map((s) => (
+              <div key={s.step} className="flex flex-col">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg text-sm font-heading font-extrabold mb-4 bg-aao-dark-blue text-white flex-shrink-0">
+                  {s.step}
+                </span>
+                <h3 className="font-heading text-aao-dark-blue text-base font-bold mb-2">{s.title}</h3>
+                <p className="font-body text-gray-600 text-sm leading-relaxed mb-4 flex-1">{s.body}</p>
+                <a
+                  href={s.cta.href}
+                  target={s.cta.external ? '_blank' : undefined}
+                  rel={s.cta.external ? 'noopener noreferrer' : undefined}
+                  className="inline-flex items-center gap-1.5 text-aao-dark-blue hover:text-aao-light-blue font-body font-semibold text-sm transition-colors duration-200"
+                >
+                  {s.cta.text}
+                  <ExternalLink size={13} />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Disciplines Grid */}
-      <section className="py-16 md:py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 max-w-2xl">
             <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
               Who We Need
@@ -158,8 +214,8 @@ export default function Contribute() {
       </section>
 
       {/* Academic Section */}
-      <section className="py-16 md:py-24 px-4 bg-aao-beige">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 bg-aao-beige">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
               For Educators &amp; Students
@@ -196,7 +252,7 @@ export default function Contribute() {
                 ))}
               </ul>
               <a
-                href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+                href={SLACK_INVITE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-aao-dark-blue hover:bg-aao-light-blue text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200 w-fit"
@@ -233,7 +289,7 @@ export default function Contribute() {
                 ))}
               </ul>
               <a
-                href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+                href={SLACK_INVITE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-aao-light-blue hover:bg-blue-500 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200 w-fit"
@@ -242,43 +298,6 @@ export default function Contribute() {
                 <ArrowRight size={16} />
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Getting Started Steps */}
-      <section className="py-16 md:py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-12 max-w-2xl">
-            <p className="font-body text-aao-dark-red font-semibold text-sm uppercase tracking-widest mb-2">
-              Getting Started
-            </p>
-            <h2 className="font-heading text-aao-dark-blue text-3xl md:text-4xl font-extrabold mb-4">
-              Your First Week
-            </h2>
-            <p className="font-body text-gray-600 text-lg leading-relaxed">
-              Here's exactly what to do to go from interested to contributing.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {gettingStartedSteps.map((s) => (
-              <div key={s.step} className="flex flex-col">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg text-sm font-heading font-extrabold mb-4 bg-aao-dark-blue text-white flex-shrink-0">
-                  {s.step}
-                </span>
-                <h3 className="font-heading text-aao-dark-blue text-base font-bold mb-2">{s.title}</h3>
-                <p className="font-body text-gray-600 text-sm leading-relaxed mb-4 flex-1">{s.body}</p>
-                <a
-                  href={s.cta.href}
-                  target={s.cta.external ? '_blank' : undefined}
-                  rel={s.cta.external ? 'noopener noreferrer' : undefined}
-                  className="inline-flex items-center gap-1.5 text-aao-dark-blue hover:text-aao-light-blue font-body font-semibold text-sm transition-colors duration-200"
-                >
-                  {s.cta.text}
-                  <ExternalLink size={13} />
-                </a>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
-﻿import { ArrowRight, Train, Code2, Users } from 'lucide-react';
+﻿import { SLACK_INVITE_URL } from '../config';
+import { ArrowRight, Train, Code2, Users } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <a
-              href="https://join.slack.com/t/lab-allaboardohio/shared_invite/zt-3x7cyvl53-0IQMjvljmA64iNCZvhaP1w"
+              href={SLACK_INVITE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-aao-dark-red hover:bg-red-700 text-white font-body font-semibold px-6 py-3 rounded-full transition-colors duration-200"
