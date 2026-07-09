@@ -9,6 +9,15 @@ export const projects = [
     icon: "LayoutDashboard",
     tags: ["News", "Rail Advocacy", "Policy"],
   },
+  {
+    id: 2,
+    title: "Route Benefit Mapper",
+    description:
+      "The Route Benefit Mapper — an interactive tool for visualizing where projects provide economic and social benefits in Ohio.",
+    status: "In Development",
+    icon: "LayoutDashboard",
+    tags: ["Mapping", "Visualization", "Website"],
+  },
 ];
 
 export const comingSoon = [
