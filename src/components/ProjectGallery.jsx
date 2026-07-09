@@ -22,6 +22,7 @@ const SCIOTO_STUDY = {
 
 function ToolCard({ project }) {
   const Icon = iconMap[project.icon] || LayoutDashboard;
+  const isInDevelopment = project.status === 'In Development';
 
   return (
     <article className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden border border-gray-100 group">
@@ -32,10 +33,17 @@ function ToolCard({ project }) {
       </div>
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-2">
-          <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full bg-green-100 text-green-800 border border-green-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-            Available now
-          </span>
+          {isInDevelopment ? (
+            <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 border border-amber-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              In development
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full bg-green-100 text-green-800 border border-green-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+              Available now
+            </span>
+          )}
         </div>
         <h3 className="font-heading text-aao-dark-blue text-lg font-bold mb-2 leading-tight">
           {project.title}
@@ -53,15 +61,21 @@ function ToolCard({ project }) {
             </span>
           ))}
         </div>
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-aao-dark-blue hover:bg-aao-light-blue text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 w-fit"
-        >
-          {project.ctaLabel || 'Open tool'}
-          <ExternalLink size={14} />
-        </a>
+        {project.url ? (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-aao-dark-blue hover:bg-aao-light-blue text-white font-body font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 w-fit"
+          >
+            {project.ctaLabel || 'Open tool'}
+            <ExternalLink size={14} />
+          </a>
+        ) : (
+          <span className="inline-flex items-center gap-2 bg-gray-100 text-gray-500 font-body font-semibold text-sm px-4 py-2 rounded-full w-fit cursor-default">
+            Coming soon
+          </span>
+        )}
       </div>
     </article>
   );
