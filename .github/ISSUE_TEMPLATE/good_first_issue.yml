@@ -1,0 +1,49 @@
+name: 🌱 Good First Issue
+description: Propose a small, well-scoped task suitable for new contributors.
+title: "[Good First Issue]: "
+labels: ["good first issue", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this to define a beginner-friendly task. Keep the scope small and provide clear guidance so a new volunteer developer can pick it up.
+  - type: textarea
+    id: task
+    attributes:
+      label: Task description
+      description: A clear, self-contained description of what needs to be done.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Relevant files or components
+      description: Point contributors to where they should start (e.g. src/components/Header.jsx).
+      placeholder: |
+        - src/components/...
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will we know the task is complete?
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: skills
+    attributes:
+      label: Skills involved
+      multiple: true
+      options:
+        - React / JSX
+        - Tailwind CSS
+        - HTML
+        - Accessibility
+        - Content / copywriting
+        - Documentation
+    validations:
+      required: false

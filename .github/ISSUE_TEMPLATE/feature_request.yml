@@ -1,0 +1,54 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for the website.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement! Please describe your idea below.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: Is your feature request related to a problem? What need does it address?
+      placeholder: I'm always frustrated when...
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any alternative solutions or features you've considered.
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area of the site
+      description: Which part of the website does this relate to?
+      options:
+        - Homepage / Hero
+        - Projects / Tools
+        - Documentation
+        - Community / Contribute
+        - Navigation / Layout
+        - Accessibility
+        - Performance
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups or references
+      description: Add any mockups, screenshots, or links to similar examples.
+    validations:
+      required: false

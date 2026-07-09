@@ -1,0 +1,51 @@
+name: 📝 Content Update
+description: Request a change to text, images, links, or project/tool data on the site.
+title: "[Content]: "
+labels: ["content", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request updates to copy, images, links, or project/tool listings.
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Type of content
+      options:
+        - Text / copy
+        - Image / media
+        - Link
+        - Project or tool listing
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where on the site is this content? (page, section, or component)
+      placeholder: ProjectGallery — "Built for Advocates" section
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current content
+      description: What does it currently say or show?
+    validations:
+      required: false
+  - type: textarea
+    id: requested
+    attributes:
+      label: Requested change
+      description: What should it say or show instead?
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Any other details, sources, or files needed for this change.
+    validations:
+      required: false

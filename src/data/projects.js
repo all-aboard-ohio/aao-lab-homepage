@@ -13,7 +13,7 @@ export const projects = [
     id: 2,
     title: "Route Benefit Mapper",
     description:
-      "The Route Benefit Mapper — an interactive tool for visualizing where projects provide economic and social benefits in Ohio.",
+      "The Route Benefit Mapper — an interactive tool for visualizing where projects provide economic and social benefits in Ohio - at a local, regional, and statewide level.",
     status: "In Development",
     icon: "LayoutDashboard",
     tags: ["Mapping", "Visualization", "Website"],
